@@ -33,5 +33,13 @@ app.get('/help',(request, response) => {
         title: 'Help'
     });
 });
+
+// * tüm get isteklerini kapsar öcneki get isteklerine girmediyse buraya girer
+app.get('*',(req,res) =>{
+    res.render('404',{
+        title:'İstenen URL Bulunamadı'
+    });
+});
+
 //dinlenecek port ve callback
 app.listen(3000, () => {console.log('3000 portunda server ayakta')});
