@@ -3,7 +3,7 @@ const app = express();//Expresi kullanmak için gereken başlangıç fonksiyonu
 const path = require('path');
 const PUBLIC_PATH_URL = path.join(__dirname,'../public');//index.html in konumu
 
-app.use(express.static(PUBLIC_PATH_URL));
+app.use(express.static(PUBLIC_PATH_URL));//statik içerik servis etme
 
 //app.get() fonksiyonu string türünde bir PATH alır.
 //PATH domainden sonraki kısımdır ör: ferhateroglu.com/blog 
