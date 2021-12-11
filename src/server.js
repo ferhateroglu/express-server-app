@@ -8,20 +8,20 @@ app.use(express.static(PUBLIC_PATH_URL));//statik içerik servis etme
 //app.get() fonksiyonu string türünde bir PATH alır.
 //PATH domainden sonraki kısımdır ör: ferhateroglu.com/blog 
 app.get('/',(request, response) => {
-    response.send('<h1>Helloo  world</h1>');
+    response.render('index',{
+        title: 'Ana Sayfa',
+        body: 'ara metin'
+    });
 });
-
-app.get('/about',(request,response) => {
-    response.send('<h1>About</h1>');
+app.get('/about',(request, response) => {
+    response.render('about',{
+        title: 'ABOUT'
+    });
 });
-
-app.get('/help',(request,response) => {
-    response.send('help');
+app.get('/help',(request, response) => {
+    response.render('help',{
+        title: 'Help'
+    });
 });
-
-app.get('/weather',(request,response) => {
-    response.send({name:'weather'});
-});
-
 //dinlenecek port ve callback
 app.listen(3000, () => {console.log('3000 portunda server ayakta')});
