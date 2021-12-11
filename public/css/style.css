@@ -5,6 +5,7 @@ body{
     align-items: center;
     justify-content: center;
     font-family: sans-serif;
+    font-size: 22px;
 }
 
 .header-container{
@@ -12,7 +13,7 @@ body{
 }
 .header-container a{
     text-decoration: none;
-    color: #ec895a;
+    color: #ef9273;
     font-size: 20px;
     padding: 5px;
     font-weight: bold;
@@ -21,6 +22,7 @@ body{
 .header-container a:hover{
     text-decoration: none;
     color: #ff5100;
+    transition: .3s;
 }
 
 .menu{
@@ -28,6 +30,15 @@ body{
 }
 
 .header{
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 600;
+    color: rgb(52, 58, 63);
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    margin: 10px;
+    color: lightgrey;
+    border-top: 1px solid lightgrey ;
+    
 }

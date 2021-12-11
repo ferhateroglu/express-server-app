@@ -25,12 +25,12 @@ app.get('/',(request, response) => {
 });
 app.get('/about',(request, response) => {
     response.render('about',{
-        title: 'ABOUT'
+        title: 'Hakkında'
     });
 });
 app.get('/help',(request, response) => {
     response.render('help',{
-        title: 'Help'
+        title: 'Yardım'
     });
 });
 
