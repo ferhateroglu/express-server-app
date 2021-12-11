@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="/css/style.css"><!--ilk / işaretinden önce . koyma-->
     <script src="/js/script.js"></script>
 </head>
-<body>
-    {{>header}}<!-- partial dan gelen değer-->
-    <!-- response.render dan gönderilen değerler süslü parantezler ieçrisine eklenir -->
-    {{body}}
+<body>   
+    <div class="content">
+        {{>header}}<!-- partial dan gelen değer-->
+        <!-- response.render dan gönderilen değerler süslü parantezler ieçrisine eklenir -->
+        {{body}}
+    </div>
 </body>
 </html>

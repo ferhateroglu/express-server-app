@@ -1,7 +1,33 @@
-*{
-    margin: 0;
-    padding: 0;
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
 }
-h1{
-    color: blue;
+
+.header-container{
+    margin-top:10px;
+}
+.header-container a{
+    text-decoration: none;
+    color: #ec895a;
+    font-size: 20px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.header-container a:hover{
+    text-decoration: none;
+    color: #ff5100;
+}
+
+.menu{
+    margin-bottom: 20px;
+}
+
+.header{
+    font-size: 50px;
+    font-weight: 600;
 }
