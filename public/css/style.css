@@ -6,6 +6,7 @@ body{
     justify-content: center;
     font-family: sans-serif;
     font-size: 22px;
+    background-color: whitesmoke;
 }
 
 .header-container{
@@ -14,7 +15,7 @@ body{
 .header-container a{
     text-decoration: none;
     color: #ef9273;
-    font-size: 20px;
+    font-size: 22px;
     padding: 5px;
     font-weight: bold;
 }
@@ -43,4 +44,7 @@ body{
     color: lightgrey;
     border-top: 1px solid lightgrey ;
     
+}
+p{
+    color: rgba(57, 65, 71, 0.856);
 }

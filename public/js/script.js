@@ -20,9 +20,9 @@ searchForm.addEventListener('submit', (event) => {
                 alert(data.error);
             }
             else{
-                p1.innerText = 'İl: '+ data.adres;
-                p2.innerText = 'Sıcaklık: '+ data.sıcaklık;
-                p3.innerText = 'Rüzgar: '+ data.rüzgar;
+                p1.innerText = 'Location: '+ data.location;
+                p2.innerText = 'Temperature: '+ data.tempC+'°';
+                p3.innerText = 'Wind: '+ data.windKph+' kph';
             }
         });
     });

@@ -20,17 +20,17 @@ hbs.registerPartials(PARTİAL_URL);//partial klasörünü kayıt etme
 //PATH domainden sonraki kısımdır ör: ferhateroglu.com/blog 
 app.get('/',(request, response) => {
     response.render('index',{
-        title: 'Ana Sayfa'
+        title: 'Home Page'
     });
 });
 app.get('/about',(request, response) => {
     response.render('about',{
-        title: 'Hakkında'
+        title: 'About'
     });
 });
 app.get('/help',(request, response) => {
     response.render('help',{
-        title: 'Yardım'
+        title: 'Help'
     });
 });
 
@@ -42,7 +42,7 @@ app.get('/forecast',(req,res) => {
 
     if(!il){
         res.send({
-            error:'adres bilgisini girmediniz'
+            error:'You did not enter an address!'
         });
     }
     else{
@@ -50,16 +50,16 @@ app.get('/forecast',(req,res) => {
         request({url: URL,json:true }, (error,response) => {
             if(typeof(response.body.error) !== 'undefined'){
                 res.send({
-                    error: 'bölge bilgisi bulunamadı'
+                    error: 'Location not found!'
                 });
             }
             else{
                 const {temp_c,wind_kph}=response.body.current;
                 //res.send(il+' ilinde hava: '+temp_c+' derece \n'+'Rüzgar: '+ wind_kph+'km/s');
                 res.send({
-                    adres: il,
-                    sıcaklık:temp_c.toString(),
-                    rüzgar:wind_kph.toString()
+                    location: il,
+                    tempC:temp_c.toString(),
+                    windKph:wind_kph.toString()
                 });
             }       
         });
@@ -70,7 +70,7 @@ app.get('/forecast',(req,res) => {
 // * tüm get isteklerini kapsar öcneki get isteklerine girmediyse buraya girer
 app.get('*',(req,res) =>{
     res.render('404',{
-        title:'404 İstenen URL Bulunamadı'
+        title:'404 Page Not found'
     });
 });
 
