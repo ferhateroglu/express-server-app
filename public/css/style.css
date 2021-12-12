@@ -23,10 +23,12 @@ body{
     text-decoration: none;
     color: #ff5100;
     transition: .3s;
+    border-bottom: 2px solid #ff5100;
 }
 
 .menu{
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .header{

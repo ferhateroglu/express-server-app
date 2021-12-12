@@ -34,10 +34,18 @@ app.get('/help',(request, response) => {
     });
 });
 
+app.get('/forecast',(req,res) => {
+    console.log(req.query);
+    res.send({
+        weather:'Güneşli',
+        adress: req.query.adress
+    });
+});
+
 // * tüm get isteklerini kapsar öcneki get isteklerine girmediyse buraya girer
 app.get('*',(req,res) =>{
     res.render('404',{
-        title:'İstenen URL Bulunamadı'
+        title:'404 İstenen URL Bulunamadı'
     });
 });
 
