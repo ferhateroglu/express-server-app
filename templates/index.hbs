@@ -6,13 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/style.css"><!--ilk / işaretinden önce . koyma-->
-    <script src="/js/script.js"></script>
+
 </head>
 <body>   
     <div class="content">
         {{>header}}<!-- partial dan gelen değer-->
-        {{body}}<!-- response.render dan gönderilen değerler süslü parantezler ieçrisine eklenir -->
+
+        <!-- response.render dan gönderilen değerler süslü parantezler ieçrisine eklenir -->
+        <form id="search-form">
+            <input id="search-input" placeholder="adres giriniz">
+            <button>Ara</button> 
+        </form>
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <p id="p3"></p>
         {{>footer}}
     </div>
+        <script src="/js/script.js"></script>
 </body>
 </html>
